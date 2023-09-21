@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:keyboard_dismisser/keyboard_dismisser.dart';
 import 'package:ploff_app/home/home_page.dart';
 
 void main() {
@@ -10,8 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
+    return KeyboardDismisser(
+      child: ScreenUtilInit(
+        child: MaterialApp(
+          home: HomePage(),
+        ),
+      ),
     );
   }
 }

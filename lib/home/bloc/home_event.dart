@@ -2,6 +2,9 @@ part of 'home_bloc.dart';
 
 @immutable
 abstract class HomeEvent {}
-class GetCategoryEvent extends HomeEvent{
-  GetCategoryEvent();
+class CategoryEvent extends HomeEvent{
+  CategoryEvent();
+}
+class BannerEvent extends HomeEvent{
+  BannerEvent();
 }
